@@ -3,6 +3,17 @@
 @theme {
   --font-sans: "Inter", sans-serif;
   --font-safe-code: "Science Gothic", monospace;
+
+  --animate-y-spin: y-spin 250ms linear infinite;
+
+  @keyframes y-spin {
+    from {
+      transform: rotateY(0deg);
+    }
+    to {
+      transform: rotateY(360deg);
+    }
+  }
 }
 
 @property --gradient-angle {
@@ -12,9 +23,9 @@
 }
 
 :root {
-  --gradient-border-1: #2374AB;
+  --gradient-border-1: #2374ab;
   --gradient-border-2: #231651;
-  --gradient-border-3: #4DCCBD;
+  --gradient-border-3: #4dccbd;
 }
 
 .gradient-border {
