@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", sans-serif;
+  --font-safe-code: "Science Gothic", monospace;
+}
+
+@property --gradient-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+:root {
+  --gradient-border-1: #2374AB;
+  --gradient-border-2: #231651;
+  --gradient-border-3: #4DCCBD;
+}
+
+.gradient-border {
+  position: relative;
+}
+
+.gradient-border:not(:disabled)::before,
+.gradient-border:not(:disabled)::after {
+  content: "";
+  position: absolute;
+  inset: -0.2rem;
+  z-index: -1;
+  background: conic-gradient(
+    from var(--gradient-angle),
+    var(--gradient-border-1),
+    var(--gradient-border-2),
+    var(--gradient-border-3),
+    var(--gradient-border-2),
+    var(--gradient-border-1)
+  );
+  border-radius: inherit;
+  animation: rotation 20s linear infinite;
+}
+
+.gradient-border:not(:disabled)::after {
+  filter: blur(3.5rem);
+}
+
+@keyframes rotation {
+  0% {
+    --gradient-angle: 0deg;
+  }
+  100% {
+    --gradient-angle: 360deg;
+  }
+}

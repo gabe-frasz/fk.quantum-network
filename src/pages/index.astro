@@ -1,0 +1,198 @@
+---
+import { Font } from "astro:assets";
+import Container from "../components/layouts/container.astro";
+import Subtitle from "../components/modules/subtitle.astro";
+import Text from "../components/modules/text.astro";
+import { SafeSimulation } from "../components/simulations/safe.tsx";
+import { SpinningCoinSimulation } from "../components/simulations/spinning-coin.tsx";
+import { FilterSimulation } from "../components/simulations/filter.tsx";
+import { SpySimulation } from "../components/simulations/spy.tsx";
+import "../styles/global.css";
+---
+
+<html lang="pt-BR">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+    <Font cssVariable="--font-inter" preload />
+    <Font cssVariable="--font-science-gothic" preload />
+		<meta name="generator" content={Astro.generator} />
+		<title>O fim dos segredos (e como a física vai salvá-los)</title>
+	</head>
+
+	<body class="mx-4 mt-8 mb-16 bg-stone-50 text-stone-950">
+    <Container>
+      <h1 class="mb-8 text-3xl font-bold">O fim dos segredos (e como a física vai salvá-los)</h1>
+
+      <Subtitle>A Fundação</Subtitle>
+
+      <Text>
+        Toda vez que você digita sua senha ou envia uma mensagem no WhatsApp,
+        você está confiando em uma única coisa: a matemática.
+      </Text>
+
+      <Text>
+        A segurança da internet hoje (chamada criptografia RSA) funciona como um cofre,
+        e nós confiamos nele por um simples motivo: abrir esse cofre sem a chave exige
+        muitos anos de tentativas e erros.
+      </Text>
+
+      <Text>
+        Um computador comum é como um ladrão de olhos vendados,
+        já que ele precisa testar combinação por combinação e isso é exaustivo e inútil.
+      </Text>
+
+      <Text>
+        Duvida? Tente você mesmo.
+      </Text>
+
+      <SafeSimulation client:visible />
+
+      <Subtitle>O Apocalipse</Subtitle>
+
+      <Text>Viu o que acabou de acontecer?</Text>
+
+      <Text>
+        Quando você ativou o modo quântico, você não testou todas as combinações mais rápido.
+        Você <strong>trapaceou</strong>.
+      </Text>
+
+      <Text>
+        É isso que o <strong>Algoritmo de Shor</strong> faz. Um computador quântico não chuta números,
+        ele usa propriedades matemáticas para tornar a estrutura do problema "transparente"
+        e enxergar a resposta certa através dele.
+      </Text>
+
+      <Text>
+        Se esse computador estivesse disponível para as pessoas usarem, todas as senhas,
+        contas bancárias e segredos de estado do mundo estariam abertos em segundos.
+      </Text>
+
+      <Text>
+        A matemática falhou e o cofre está quebrado.
+        Mas, se não podemos mais confiar nos números... onde vamos guardar nossos segredos?
+      </Text>
+
+      <Text>A resposta não está na matemática. Está na <strong>física</strong>.</Text>
+
+      <Subtitle>A Moeda Girando</Subtitle>
+
+      <Text>
+        Para entender a solução, precisamos esquecer os bits normais (0 ou 1)
+        da computação clássica e focar em algo mais exótico: o <strong>Qubit</strong>.
+      </Text>
+
+      <Text>
+        Imagine uma moeda. No mundo normal, ela é cara ou coroa, mas no mundo quântico,
+        enquanto a moeda está girando, ela não é nem cara nem coroa. Ela está em um estado de superposição,
+        ou termos simples, ela é <strong>as duas coisas ao mesmo tempo</strong>.
+      </Text>
+
+      <Text>
+        Mas essa moeda tem uma característica bem definida: ela odeia ser observada.
+        Veja o que acontece quando você tenta descobrir o valor dela.
+      </Text>
+
+      <SpinningCoinSimulation />
+
+      <Subtitle>A Medição</Subtitle>
+
+      <Text>
+        Percebeu? O simples ato de "olhar" forçou a moeda a escolher um lado.
+      </Text>
+
+      <Text>
+        Na física quântica, <strong>medir é alterar</strong>. Você não pode ler um dado quântico
+        sem deixar sua impressão digital nela. Guarde isso.
+      </Text>
+
+      <Text>
+        Agora, imagine que Alice quer mandar essa moeda girando (qubit) para Beto.
+        Para isso, ela vai jogar a moeda através de filtros.
+      </Text>
+
+      <ul class="max-w-[65ch] ml-4 mb-4 list-disc list-inside">
+        <li>Existe o <strong>filtro em cruz (+)</strong>: a moeda passa se estiver em pé (vertical) ou deitada (horizontal).</li>
+        <li>E o <strong>filtro em X (diagonal)</strong>: a moeda passa se estiver inclinada.</li>
+      </ul>
+
+      <Text>O truque é:</Text>
+
+      <ul class="max-w-[65ch] ml-4 mb-4 list-disc list-inside">
+        <li>Se Beto usar o <strong>mesmo filtro</strong> que Alice, a moeda passa perfeita.</li>
+        <li>
+          Se Beto usar o <strong>filtro errado</strong> (tentar passar uma moeda em pé numa fresta diagonal),
+          a moeda é forçada a escolher uma forma de passar e o resultado vira lixo aleatório.
+        </li>
+      </ul>
+
+      <Text>Tente você mesmo acertar o filtro.</Text>
+
+      <FilterSimulation />
+
+      <Subtitle>A Solução</Subtitle>
+
+      <Text>
+        Neste momento temos as peças chave para salvar a internet: a moeda girando (superposição),
+        a “impressão digital” (alteração na medição) e os tais filtros.
+        Esse plano tem nome e se chama <strong>Protocolo BB84</strong>.
+      </Text>
+
+      <Text>
+        Alice envia os qubits para Beto e eles usam esses acertos para criar uma chave secreta.
+        Essa é a mesma função que o nosso “cofre” atual possui.
+      </Text>
+
+      <Text>
+        Mas e se houver uma espiã, a Eva, tentando grampear a linha para conseguir descobrir a chave secreta?
+      </Text>
+
+      <Text>
+        Lembre-se da regra: para ler a mensagem, Eva precisa <strong>medir</strong>, e ao medir, ela altera o qubit, ou seja,
+        ela “suja” a comunicação.
+      </Text>
+
+      <Text>
+        Alice e Beto não precisam ver que de fato a Eva está lá, eles só precisam comparar uma parte da chave e,
+        no caso de haver muitos erros, eles sabem que alguém tocou nos qubits e tentam novamente.
+      </Text>
+
+      <Text>
+        Agora é a sua vez. Tome o lugar da Eva e tente roubar a chave sem ser detectado.
+      </Text>
+
+      <SpySimulation />
+
+      <Subtitle>A Realidade</Subtitle>
+
+      <Text>
+        Você falhou, não é? É exatamente por isso que a rede quântica (ou mais especificamente,
+        a distribuição quântica de chaves) é segura. Não é porque o código é difícil,
+        mas porque a física proíbe a espionagem perfeita.
+      </Text>
+
+      <Text><em>"Então, por que ainda não usamos isso em tudo?"</em> você pode estar se perguntando.</Text>
+
+      <Text>
+        Porque é difícil e bem custoso. Os qubits são sensíveis e precisamos enviá-los por centenas
+        de quilômetros sem que haja nenhuma interferência.
+        Além de que é necessário ter um controle absoluto a nível quântico para enviar apenas um qubit por vez,
+        enfim, é um processo complexo e ainda incompleto.
+      </Text>
+
+      <Text>
+        Enquanto os engenheiros constroem essa "internet física", os matemáticos correm para criar novos
+        códigos de software chamados de <strong>Criptografia Pós-Quântica</strong>.
+      </Text>
+
+      <Text>
+        Essa solução alternativa se baseia fortemente em suposições matemáticas,
+        sendo uma evolução direta dos algoritmos de criptografia que usamos atualmente,
+        mas que acredita-se que nem os computadores quânticos seriam capazes de quebrá-los.
+      </Text>
+
+      <Text>O nosso cofre quebrou, mas estamos prestes a construir um que se defende sozinho.</Text>
+    </Container>
+	</body>
+</html>
