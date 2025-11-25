@@ -7,7 +7,7 @@ export function useSafe() {
   const [safePassword, setSafePassword] = useState("");
   const [isQuantumModeActive, setIsQuantumModeActive] = useState(false);
   const [isSafeOpen, setIsSafeOpen] = useState(false);
-  const [triesLeft, setTriesLeft] = useState(2);
+  const [triesLeft, setTriesLeft] = useState(1);
 
   useEffect(() => {
     setSafePassword(generateSafePassword());
@@ -18,7 +18,7 @@ export function useSafe() {
     setPassword(prev => prev.length < 4 ? prev + newDigit : prev);
   }
 
-  function handlePasswordReset() {
+  function resetPassword() {
     setPassword("");
   }
 
@@ -53,7 +53,7 @@ export function useSafe() {
     isSafeOpen,
     triesLeft,
     handlePasswordChange,
-    handlePasswordReset,
+    resetPassword,
     handleSubmit,
     toggleQuantumMode,
   }
