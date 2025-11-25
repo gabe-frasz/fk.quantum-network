@@ -9,7 +9,7 @@ export function SafeSimulation() {
     isSafeOpen,
     triesLeft,
     handlePasswordChange,
-    handlePasswordReset,
+    resetPassword,
     handleSubmit,
     toggleQuantumMode,
   } = useSafe();
@@ -26,7 +26,7 @@ export function SafeSimulation() {
             safePassword={safePassword}
             isQuantumModeActive={isQuantumModeActive}
             onDigitKeyPress={handlePasswordChange}
-            onReset={handlePasswordReset}
+            onReset={resetPassword}
             onSubmit={handleSubmit}
           />
 

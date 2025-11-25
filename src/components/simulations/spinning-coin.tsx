@@ -31,7 +31,7 @@ export function SpinningCoinSimulation() {
       <button
         disabled={isMeasureButtonDisabled}
         onClick={toggleCoinSpinning}
-        className="px-4 py-1 text-white font-bold bg-black rounded-full transition-transform hover:cursor-pointer active:scale-95 disabled:opacity-50 hover:disabled:cursor-default active:disabled:scale-100"
+        className="px-4 py-1 text-white bg-black rounded-full transition-transform hover:cursor-pointer active:scale-95 disabled:opacity-50 hover:disabled:cursor-default active:disabled:scale-100"
       >
         {isCoinSpinning ? "Medir" : "Girar novamente"}
       </button>
