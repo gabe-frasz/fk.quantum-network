@@ -21,7 +21,7 @@ import "../styles/global.css";
 		<title>O fim dos segredos (e como a física vai salvá-los)</title>
 	</head>
 
-	<body class="min-w-screen mt-8 mb-16 px-4 bg-stone-50 text-stone-950">
+	<body class="min-w-screen mt-8 mb-16 px-4 bg-stone-100 text-stone-950">
     <Container>
       <h1 class="mb-8 text-3xl font-bold">O fim dos segredos (e como a física vai salvá-los)</h1>
 
@@ -34,17 +34,17 @@ import "../styles/global.css";
 
       <Text>
         A segurança da internet hoje (chamada criptografia RSA) funciona como um cofre,
-        e nós confiamos nele por um simples motivo: abrir esse cofre sem a chave exige
+        e nós confiamos nele por um simples motivo: abrir esse cofre sem a senha exige
         muitos anos de tentativas e erros.
       </Text>
 
       <Text>
-        Um computador comum é como um ladrão de olhos vendados,
-        já que ele precisa testar combinação por combinação e isso é exaustivo e inútil.
+        Um computador comum é como um ladrão de olhos vendados, já que ele precisa testar
+        combinação por combinação e isso é exaustivo e inútil.
       </Text>
 
       <Text>
-        Duvida? Tente você mesmo.
+        Duvida? Chute uma senha e tente você mesmo abrir o cofre abaixo.
       </Text>
 
       <SafeSimulation client:visible />
@@ -127,9 +127,9 @@ import "../styles/global.css";
         </li>
       </ul>
 
-      <Text>Tente você mesmo acertar o filtro.</Text>
+      <Text>Escolha o filtro de Beto e tente ler o qubit com o mesmo filtro que Alice irá usar.</Text>
 
-      <FilterSimulation />
+      <FilterSimulation client:visible />
 
       <Subtitle>A Solução</Subtitle>
 
@@ -162,7 +162,7 @@ import "../styles/global.css";
         Agora é a sua vez. Tome o lugar da Eva e tente roubar a chave sem ser detectado.
       </Text>
 
-      <SpySimulation />
+      <SpySimulation client:visible />
 
       <Subtitle>A Realidade</Subtitle>
 
