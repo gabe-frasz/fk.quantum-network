@@ -3,10 +3,11 @@ import { useState } from "react";
 import { getRandomBit } from "../utils/get-random-bit";
 import { getRandomFilter } from "../utils/get-random-filter";
 import type { Filter } from "../types/filter";
+import type { Bit } from "../types/bit";
 
 export function useFilter() {
 	const [aliceValue, setAliceValue] = useState(getRandomBit());
-	const [betoValue, setBetoValue] = useState<number | null>(null);
+	const [betoValue, setBetoValue] = useState<Bit | null>(null);
 	const [aliceFilter, setAliceFilter] = useState<Filter>(getRandomFilter());
 	const [betoFilter, setBetoFilter] = useState<Filter>(getRandomFilter());
 	const [isAnimationActive, setIsAnimationActive] = useState(false);
@@ -28,13 +29,13 @@ export function useFilter() {
 
 		setTimeout(() => {
 			setIsAnimationActive(false);
-		}, 4500);
+		}, 4000);
 
 		setTimeout(() => {
 			setAliceValue(getRandomBit());
 			setBetoValue(null);
 			setAliceFilter(getRandomFilter());
-		}, 6000);
+		}, 5500);
 	}
 
 	return {
