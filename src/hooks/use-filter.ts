@@ -1,14 +1,14 @@
 import { useState } from "react";
 
 import { getRandomBit } from "../utils/get-random-bit";
+import { getRandomFilter } from "../utils/get-random-filter";
+import type { Filter } from "../types/filter";
 
 export function useFilter() {
 	const [aliceValue, setAliceValue] = useState(getRandomBit());
 	const [betoValue, setBetoValue] = useState<number | null>(null);
-	const [aliceFilter, setAliceFilter] = useState<"X" | "+">(
-		getRandomBit() === 0 ? "X" : "+",
-	);
-	const [betoFilter, setBetoFilter] = useState<"X" | "+">("+");
+	const [aliceFilter, setAliceFilter] = useState<Filter>(getRandomFilter());
+	const [betoFilter, setBetoFilter] = useState<Filter>(getRandomFilter());
 	const [isAnimationActive, setIsAnimationActive] = useState(false);
 
 	function toggleBetoFilter() {
@@ -33,7 +33,7 @@ export function useFilter() {
 		setTimeout(() => {
 			setAliceValue(getRandomBit());
 			setBetoValue(null);
-			setAliceFilter(getRandomBit() === 0 ? "X" : "+");
+			setAliceFilter(getRandomFilter());
 		}, 6000);
 	}
 
