@@ -1,14 +1,12 @@
 import { useState } from "react";
 
-function getRandomValue() {
-	return Math.floor(Math.random() * 2);
-}
+import { getRandomBit } from "../utils/get-random-bit";
 
 export function useFilter() {
-	const [aliceValue, setAliceValue] = useState(getRandomValue());
+	const [aliceValue, setAliceValue] = useState(getRandomBit());
 	const [betoValue, setBetoValue] = useState<number | null>(null);
 	const [aliceFilter, setAliceFilter] = useState<"X" | "+">(
-		getRandomValue() === 0 ? "X" : "+",
+		getRandomBit() === 0 ? "X" : "+",
 	);
 	const [betoFilter, setBetoFilter] = useState<"X" | "+">("+");
 	const [isAnimationActive, setIsAnimationActive] = useState(false);
@@ -24,7 +22,7 @@ export function useFilter() {
 			if (aliceFilter === betoFilter) {
 				setBetoValue(aliceValue);
 			} else {
-				setBetoValue(getRandomValue());
+				setBetoValue(getRandomBit());
 			}
 		}, 500);
 
@@ -33,9 +31,9 @@ export function useFilter() {
 		}, 4500);
 
 		setTimeout(() => {
-			setAliceValue(getRandomValue());
+			setAliceValue(getRandomBit());
 			setBetoValue(null);
-			setAliceFilter(getRandomValue() === 0 ? "X" : "+");
+			setAliceFilter(getRandomBit() === 0 ? "X" : "+");
 		}, 6000);
 	}
 
