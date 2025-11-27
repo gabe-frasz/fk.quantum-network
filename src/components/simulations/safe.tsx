@@ -91,7 +91,7 @@ function SafePanel(props: SafePanelProps) {
 
   return (
     <div className="w-20 p-1 bg-stone-400 border-2 border-stone-300 rounded">
-      <div className="w-full h-5 mb-1 pl-2 text-emerald-950 tracking-[.3rem] font-safe-code bg-emerald-700">
+      <div className="w-full h-5 mb-1 pl-2 text-emerald-950 tracking-[.4rem] font-safe-code bg-emerald-700">
         {password}
       </div>
 

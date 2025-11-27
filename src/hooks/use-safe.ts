@@ -23,6 +23,8 @@ export function useSafe() {
   }
 
   function handleSubmit() {
+    if (isSafeOpen) return;
+
     setTriesLeft(prev => prev - 1 > 0 ? prev - 1 : 0);
 
     const safePasswordArr = safePassword.split("");
@@ -30,12 +32,12 @@ export function useSafe() {
 
     for (const digit of passwordArr) {
       const safeDigitIndex = safePasswordArr.findIndex(safeDigit => safeDigit === digit);
-      if (safeDigitIndex === -1) return;
+      if (safeDigitIndex === -1) return setPassword("FAIL");
 
       safePasswordArr.splice(safeDigitIndex, 1);
     }
 
-    if (safePasswordArr.length !== 0) return;
+    if (safePasswordArr.length !== 0) return setPassword("FAIL");
 
     setPassword("");
     setIsSafeOpen(true);
