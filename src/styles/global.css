@@ -5,6 +5,10 @@
   --font-safe-code: "Science Gothic", monospace;
 
   --animate-y-spin: y-spin 250ms linear infinite;
+  --animate-spy-stroke-main-1: spy-stroke-main 1.6s ease-in 7 forwards;
+  --animate-spy-stroke-secondary-1: spy-stroke-secondary 1.6s ease-in 800ms 8 backwards;
+  --animate-spy-stroke-main-2: spy-stroke-main 1.6s ease-out 900ms 7 backwards;
+  --animate-spy-stroke-secondary-2: spy-stroke-secondary 1.6s ease-out 1.7s 6 backwards;
 
   @keyframes y-spin {
     from {
@@ -12,6 +16,37 @@
     }
     to {
       transform: rotateY(360deg);
+    }
+  }
+
+  @keyframes spy-stroke-main {
+    0% {
+      stroke-dashoffset: 160;
+      opacity: 1;
+    }
+    50% {
+      stroke-dashoffset: 0;
+    }
+    99% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+  @keyframes spy-stroke-secondary {
+    0% {
+      stroke-dashoffset: 160;
+      opacity: 1;
+    }
+    49% {
+      opacity: 1;
+    }
+    50%,
+    100% {
+      stroke-dashoffset: 0;
+      opacity: 0;
     }
   }
 }
