@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=WDXL+Lubrifont+SC&family=Workbench&display=swap');
+
 @import "tailwindcss";
 
 @theme {
   --font-sans: "Inter", sans-serif;
-  --font-safe-code: "Science Gothic", monospace;
+  --font-safe-code: "Workbench", monospace;
 
   --animate-y-spin: y-spin 250ms linear infinite;
   --animate-spy-stroke-main-1: spy-stroke-main 1.6s ease-in 7 forwards;

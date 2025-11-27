@@ -6,26 +6,21 @@ import vercel from "@astrojs/vercel";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [react()],
+	integrations: [react()],
 
-  vite: {
-      plugins: [tailwindcss()],
+	vite: {
+		plugins: [tailwindcss()],
 	},
 
-  adapter: vercel(),
+	adapter: vercel(),
 
-  experimental: {
-      fonts: [
-          {
-              provider: fontProviders.google(),
-              name: "Inter",
-              cssVariable: "--font-inter",
-          },
-          {
-              provider: fontProviders.google(),
-              name: "Science Gothic",
-              cssVariable: "--font-science-gothic",
-          },
-      ],
+	experimental: {
+		fonts: [
+			{
+				provider: fontProviders.google(),
+				name: "Inter",
+				cssVariable: "--font-inter",
+			},
+		],
 	},
 });
