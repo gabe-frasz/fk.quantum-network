@@ -59,6 +59,7 @@
   inherits: false;
 }
 
+
 :root {
   --gradient-border-1: #2374ab;
   --gradient-border-2: #231651;
@@ -82,7 +83,7 @@
     var(--gradient-border-3),
     var(--gradient-border-2),
     var(--gradient-border-1)
-  );
+    );
   border-radius: inherit;
   animation: rotation 20s linear infinite;
 }
@@ -100,6 +101,79 @@
   }
 }
 
+.title {
+  margin-bottom: 2rem; 
+  font-size: 34px;
+  line-height: 1.25rem; 
+  font-weight: 700;
+  color: #200000;
+  text-align: center;
+}
+
+.nomes {
+  color: #200000;
+  text-align: center;
+  font-size: 13px;
+}
+
+.container-body {
+  /* w-fit: A largura se adapta ao conteúdo do elemento */
+  width: fit-content;
+  /* max-w-full: Garante que não ultrapasse a largura do container pai */
+  max-width: 100%;
+  
+  /* mx-auto: Centraliza o elemento horizontalmente na tela */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.text-body {
+  /* max-w-[65ch] */
+  max-width: 65ch;
+  
+  /* mb-4 (equivale a 1rem ou 16px na escala padrão do Tailwind) */
+  margin-bottom: 1rem; 
+
+  /* text-left */
+  text-align: left;
+  
+  /* text-lg (Ajustes de tamanho e altura da linha) */
+  font-size: 1.25rem;
+  line-height: 1.75rem; 
+  
+  /* text-stone-900 (Um cinza bem escuro) */
+  color: #240505;
+}
+
+.subtitle-body {
+  /* mt-8 (equivale a 2rem ou 32px na escala do Tailwind) */
+  margin-top: 2rem; 
+
+  /* mb-4 (equivale a 1rem ou 16px na escala do Tailwind) */
+  margin-bottom: 1rem; 
+
+  /* text-left */
+  text-align: left;
+  
+  /* text-2xl (Tamanho da fonte grande) */
+  font-size: 1.5rem;
+  line-height: 2rem; 
+  
+  /* text-stone-900 (Cor Stone 900) */
+  color: #000000;
+  
+  /* font-bold */
+  font-weight: 700; /* 700 é o valor numérico para 'bold' (negrito) */
+}
+
+body {
+  padding-top: 7vh;
+  background-color: #faebd7;
+  background-size: cover; 
+  background-position: center;
+  background-attachment: fixed;
+  font-family: var(--font-sans);
+}
 
 a {
   color: #fff;
@@ -107,10 +181,12 @@ a {
   transition: 0.3s;
 }
 
-.link-ref{
-  color: #000000;
+.link-ref {
+  color: #790f0f;
   text-decoration: none;
   transition: 0.3s;
+  text-decoration: underline;
+  font-size: 18px;
 }
 
 a:hover {
@@ -118,9 +194,14 @@ a:hover {
 }
 
 .logo {
-  font-size: 24px;
-  text-transform: uppercase;
+  font-size: 15px;
   letter-spacing: 4px;
+}
+
+.bcc {
+  font-size: 14px;
+  letter-spacing: 4px;
+  font-weight: bold;
 }
 
 nav {
@@ -131,12 +212,10 @@ nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
-  background: #23232e;
+  background: #421313;
   height: 8vh;
   z-index: 1000; 
 }
-
 
 .nav-list {
   list-style: none;
@@ -148,8 +227,6 @@ nav {
   margin-left: 32px;
 }
 
-
-
 @media (max-width: 999px) {
   .nav-list {
     position: absolute;
@@ -157,7 +234,7 @@ nav {
     right: 0;
     width: 50vw;
     height: 92vh;
-    background: #23232e;
+    background: #421313;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
