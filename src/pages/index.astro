@@ -20,10 +20,30 @@ import "../styles/global.css";
 		<title>O fim dos segredos (e como a física vai salvá-los)</title>
 	</head>
 
+
 	<body class="min-w-screen mt-8 mb-16 px-4 bg-stone-100 text-stone-950">
+        <header>
+      <nav>
+        <a class="logo" href="/">O fim dos segredos (e como a física vai salvá-los)</a>
+        <div class="mobile-menu">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </div>
+        <ul class="nav-list">
+          <li><a href="#A Fundação">A Fundação</a></li>
+          <li><a href="#O Apocalipse">O Apocalipse</a></li>
+          <li><a href="#A Moeda Girando">A Moeda Girando</a></li>
+          <li><a href="#A Medição">A Medição</a></li>
+          <li><a href="#A Solução">A Solução</a></li>
+          <li><a href="#A Realidade">A Realidade</a></li>
+        </ul>
+      </nav>
+    </header>
     <Container>
       <h1 class="mb-8 text-3xl font-bold">O fim dos segredos (e como a física vai salvá-los)</h1>
 
+      <section id="A Fundação">
       <Subtitle>A Fundação</Subtitle>
 
       <Text>
@@ -45,9 +65,11 @@ import "../styles/global.css";
       <Text>
         Duvida? Chute uma senha e tente você mesmo abrir o cofre abaixo.
       </Text>
+      </section>
 
       <SafeSimulation client:visible />
 
+      <section id="O Apocalipse">
       <Subtitle>O Apocalipse</Subtitle>
 
       <Text>Viu o que acabou de acontecer?</Text>
@@ -74,7 +96,9 @@ import "../styles/global.css";
       </Text>
 
       <Text>A resposta não está na matemática. Está na <strong>física</strong>.</Text>
+      </section>
 
+      <section id="A Moeda Girando">
       <Subtitle>A Moeda Girando</Subtitle>
 
       <Text>
@@ -92,9 +116,10 @@ import "../styles/global.css";
         Mas essa moeda tem uma característica bem definida: ela odeia ser observada.
         Veja o que acontece quando você tenta descobrir o valor dela.
       </Text>
-
+      </section>
       <SpinningCoinSimulation client:visible />
 
+      <section id="A Medição">
       <Subtitle>A Medição</Subtitle>
 
       <Text>
@@ -110,6 +135,7 @@ import "../styles/global.css";
         Agora, imagine que Alice quer mandar essa moeda girando (qubit) para Beto.
         Para isso, ela vai jogar a moeda através de filtros.
       </Text>
+      </section>
 
       <ul class="max-w-[65ch] ml-4 mb-4 list-disc list-inside">
         <li>Existe o <strong>filtro em cruz (+)</strong>: a moeda passa se estiver em pé (vertical) ou deitada (horizontal).</li>
@@ -130,6 +156,7 @@ import "../styles/global.css";
 
       <FilterSimulation client:visible />
 
+      <section id="A Solução">
       <Subtitle>A Solução</Subtitle>
 
       <Text>
@@ -166,9 +193,11 @@ import "../styles/global.css";
         Alice irá enviar 7 qubits em sequência com filtros aleatórios e você precisará ler
         cada um deles com o mesmo filtro que ela usará, caso contrário, você aumentará a chance de ser detectado.
       </Text>
+      </section>
 
       <SpySimulation client:visible />
 
+      <section id="A Realidade">
       <Subtitle>A Realidade</Subtitle>
 
       <Text>
@@ -198,6 +227,35 @@ import "../styles/global.css";
       </Text>
 
       <Text>O nosso cofre quebrou, mas estamos prestes a construir um que se defende sozinho.</Text>
+
+      <Subtitle>Referências</Subtitle>
+      <Text>
+      <a href="http://uab.ifsul.edu.br/tsiad/conteudo/modulo5/src/biblioteca/1_Leitura_Complementar_Algoritmos_de_Criptografia.pdf.pdf" class="link-ref">Criptografia simétrica e assimétrica: os principais algoritmos de cifragem</a>
+      <br>
+      <a href="https://quantum.country/" class="link-ref">A free introduction to quantum computing and quantum mechanics</a>
+      <br>
+      <a href="https://www.bloch-sphere.app/" class="link-ref">Bloch sphere simulator</a>
+      <br>
+      <a href="https://www.scielo.br/j/rbef/a/9nqhvdBC5fVYzvR5sjXCNHk/?format=pdf&lang=pt" class="link-ref">Introdução à criptografia quântica</a>
+      <br>
+      <a href="https://cbpfindex.cbpf.br/publication_pdfs/mo00103.2011_01_19_14_02_19.pdf" class="link-ref">Estudo Introdutório do Protocolo Quântico BB84 para Troca Segura de Chaves</a>
+      <br>
+      <a href="https://www.sciencedirect.com/science/article/pii/S0304397514004241" class="link-ref">Quantum cryptography: Public key distribution and coin tossing - ScienceDirect</a>
+      <br>
+      <a href="https://quantum.cloud.ibm.com/learning/pt/modules/computer-science/quantum-key-distribution" class="link-ref">Distribuição de Chaves Quânticas (QKD) | IBM Quantum Learning</a>
+      <br>
+      <a href="https://www.scielo.br/j/rbef/a/rtjpncryxChxYBM4QjCjwby/?lang=pt" class="link-ref">Simulação do protocolo BB84 de criptografia quântica utilizando um feixe laser intenso</a>
+      <br>
+      <a href="https://blog.cloudflare.com/another-look-at-pq-signatures/" class="link-ref">A look at the latest post-quantum signature standardization candidates</a>
+      <br>
+      <a href="https://developers.cloudflare.com/ssl/post-quantum-cryptography/#hybrid-key-agreement" class="link-ref">Post-quantum cryptography (PQC) - SSL/TLS</a>
+      <br>
+      <a href="https://csrc.nist.gov/projects/post-quantum-cryptography" class="link-ref">Post-Quantum Cryptography | CSRC</a>
+      <br>
+      <a href="https://fenasbac.com.br/documentos/criptografia-pos-quantica-pt.pdf" class="link-ref">Análise da viabilidade de aplicação de métodos de criptografia pós-quântica aplicados ao sistema de pagamentos instantâneos brasileiro (Pix)</a>
+      </Text>
+
+      </section>
     </Container>
 	</body>
 </html>
