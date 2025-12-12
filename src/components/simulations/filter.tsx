@@ -61,7 +61,7 @@ export function FilterSimulation() {
           </svg>
 
           {/* Alice's filter */}
-          <span className="absolute top-1/2 -translate-y-1/2 left-5 block p-2 font-bold bg-white">
+          <span className="absolute top-1/2 -translate-y-1/2 left-5 block p-2 font-bold bg-[#faebd7]">
             {betoValue !== null ? aliceFilter : "?"}
           </span>
 
@@ -69,7 +69,7 @@ export function FilterSimulation() {
           <button
             disabled={isAnimationActive}
             onClick={toggleBetoFilter}
-            className={`absolute top-1/2 -translate-y-1/2 right-6 block p-2 font-bold bg-white border-2 rounded-lg transition-all delay-400 hover:cursor-pointer ${isAnimationActive ? aliceFilter === betoFilter ? "border-emerald-600" : "border-rose-600" : "border-stone-800"}`}
+            className={`absolute top-1/2 -translate-y-1/2 right-6 block p-2 font-bold bg-[#faebd7] border-2 rounded-lg transition-all delay-400 hover:cursor-pointer ${isAnimationActive ? aliceFilter === betoFilter ? "border-emerald-600" : "border-rose-600" : "border-stone-800"}`}
           >
             {betoFilter}
           </button>

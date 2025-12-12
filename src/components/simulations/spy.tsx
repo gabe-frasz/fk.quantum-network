@@ -13,7 +13,7 @@ export function SpySimulation() {
 
   return (
     <SimulationContainer>
-      <div className="relative w-full flex flex-col justify-center items-center bg-stone-50 rounded-xl">
+      <div className="relative w-full flex flex-col justify-center items-center rounded-xl">
         <span className={`inline-block mb-4 sm:text-xl font-bold transition-colors ${errorRate >= 14 ? "text-rose-500" : ""}`}>
           {errorRate}% de erros
         </span>
